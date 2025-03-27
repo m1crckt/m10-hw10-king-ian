@@ -31,6 +31,7 @@ body {
 
 .article__link {
   text-decoration: none;
+  color: var(--danger-color);
 }
 
 .article__link:hover {
@@ -73,10 +74,6 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
-}
-
-main a {
-  color: var(--danger-color);
 }
 
 .article {
