@@ -21,63 +21,72 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a1a1a1' fill-opacity='0.59' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-h1 {
+.article__h1 {
   font-size: 2.5rem;
 }
 
-h1, h2 {
+.article__h1, .article__h2 {
   text-align: center;
 }
 
-a {
+.article__link {
   text-decoration: none;
 }
 
-a:hover {
+.article__link:hover {
   text-decoration: underline;
 }
 
-header {
+.header {
   background-color: var(--primary-color);
   padding: 48px 0;
   border-bottom: var(--secondary-color) 6px solid;
 }
 
-header a {
+.header__link {
   font-size: 1.5rem;
   color: var(--off-white);
+  text-decoration: none;
+}
+
+.header__link:not(:first-of-type) {
+  margin-left: 24px;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__logo {
+  margin-right: auto;
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+.header__nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
 }
 
 main a {
   color: var(--danger-color);
 }
 
-main > article, nav{
+.article {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-}
-
-nav > a:not(:first-of-type){
-  margin-left: 24px;
-}
-
-nav > a.logo {
-  margin-right: auto;
-  text-transform: uppercase;
-}
-
-main > section, main > article {
+.hero, .article {
   margin-bottom: 96px;
   box-shadow: 4px 4px 10px var(--gray);
   background-color: var(--white);
 }
 
-main > section.hero {
+.hero {
   height: 300px;
   background-image: url(https://picsum.photos/1920/1000);
   background-size: cover;
@@ -89,7 +98,7 @@ main > section.hero {
   text-align: center;
 }
 
-section.hero > .call-to-action {
+.hero__cta {
   font-size: 2rem;
   font-weight: 700;
   text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
@@ -97,7 +106,7 @@ section.hero > .call-to-action {
   margin: 0;
 }
 
-section.hero > button {
+.hero__button {
   background-color: var(--secondary-color);
   border: none;
   padding: 12px 24px;
@@ -106,16 +115,16 @@ section.hero > button {
   cursor: pointer;
 }
 
-main article {
+.article {
   padding: 48px 96px;
 }
 
-main p {
+.article__p {
   line-height: 1.75;
   margin-bottom: 48px;;
 }
 
-main > article img {
+.article__img {
   float: left;
   width: 300px;
   height: auto;
@@ -123,7 +132,7 @@ main > article img {
   margin-bottom: 6px;
 }
 
-footer {
+.footer {
   margin-top: auto;
   background-color: var(--gray);
   text-align: center;
